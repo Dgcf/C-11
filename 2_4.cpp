@@ -9,9 +9,21 @@
     fprintf(stderr, "\n");      \
 }
 
+#define assert_static(e) \
+    do  \
+    {   \
+        enum { assert_static_ = 1 / (e)};   \
+    } while (0);
 
+template<typename t, typename u> 
+int bit_copy(t& a, u& b)
+{
+    static_assert(sizeof(b) == sizeof(a), "the parameter of bit_copy must have same width");
+}
+    
 int main()
 {
-    int x = 3;
-    LOG("x = %d", x);
+    int a = 10;
+    double b = 3;
+    bit_copy<int, int>(a, b);
 }
