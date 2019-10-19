@@ -29,6 +29,10 @@ struct Nothrow
     }
 };
 
+typedef const int T;
+typedef T& TR;
+TR& v = 1;
+
 int main()
 {
     Maythrow m;

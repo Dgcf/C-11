@@ -3,10 +3,10 @@ using namespace std;
 
 struct Copyable
 {
-    Copyable() {}
+    Copyable() { cout << "Copyable" << endl; }
     Copyable(const Copyable& o)
     {
-        cout << "Copied" << endl;
+        cout << "Copyable(const Copyable& o)" << endl;
     }
     // Copyable(Copyable&&)
     // {

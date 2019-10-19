@@ -3,6 +3,7 @@
  * *****************************************/
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 template<typename T=int> void TempFun(T a)
@@ -13,5 +14,5 @@ template<typename T=int> void TempFun(T a)
 int main()
 {
     TempFun(1);
-    TempFun("hello");
+    TempFun<string>("hello");
 }

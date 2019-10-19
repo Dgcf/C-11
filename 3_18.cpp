@@ -41,13 +41,14 @@ int HasPtrMem::n_mvtr = 0;
 
 HasPtrMem GetTemp()
 {
-    return HasPtrMem();                 // ?
+    HasPtrMem h;
+    return h;
 }
 
 int main()
 {
-    //HasPtrMem a = GetTemp();
-    const bool & judgement = true;
-    const int& i = 10;
+    HasPtrMem a = GetTemp();
+    // const bool & judgement = true;
+    // const int& i = 10;
     return 0;
 }
